@@ -42,7 +42,7 @@ def format_duration(seconds):
   m = int(((seconds - s)/60) % 60)
   h = int(((seconds - (60*m) - s)/3600) % 24 )
   d = int(((seconds - (3600*h) - (60*m) - s) / 86400) % 365)
-  y = int(((seconds - (86400 * d) - (3600*h) - (60*m) - s)/31536000))
+  y = int(((seconds - (86400*d) - (3600*h) - (60*m) - s)/31536000))
   
   if y > 0:
     f_date.append(f'{y} years' if y > 1 else f'{y} year')
