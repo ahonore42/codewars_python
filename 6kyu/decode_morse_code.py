@@ -35,12 +35,12 @@
 MORSE_CODE = {'.-': 'A', '-...': 'B', '-.-.': 'C', '-..': 'D', '.': 'E', '..-.': 'F', '--.': 'G', '....': 'H', '..': 'I', '.---': 'J', '-.-': 'K', '.-..': 'L', '--': 'M', '-.': 'N', '---': 'O', '.--.': 'P', '--.-': 'Q', '.-.': 'R', '...': 'S', '-': 'T', '..-': 'U', '...-': 'V', '.--': 'W', '-..-': 'X', '-.--': 'Y', '--..': 'Z', '-----': '0', '.----': '1', '..---': '2', '...--': '3', '....-': '4', '.....': '5', '-....': '6', '--...': '7', '---..': '8', '----.': '9', '.-.-.-': '.', '--..--': ',', '..--..': '?', '.----.': "'", '-.-.--': '!', '-..-.': '/', '-.--.': '(', '-.--.-': ')', '.-...': '&', '---...': ':', '-.-.-.': ';', '-...-': '=', '.-.-.': '+', '-....-': '-', '..--.-': '_', '.-..-.': '"', '...-..-': '$', '.--.-.': '@', '...---...': 'SOS'}
 
 def decodeMorse(morse_code):
-    codes = morse_code.split(' '); chars = []; message = '';
+  codes = morse_code.split(' '); chars = []; message = '';
 
-    for code in codes:
-        if len(chars) >= 1 and chars[-1] != ' ' and code == '': chars.append(' ')
-        elif code != '': chars.append(MORSE_CODE[code])
-    
-    if chars[-1] == ' ': chars = chars[:-1]
-    for char in chars: message += char
-    return message
+  for code in codes:
+    if len(chars) >= 1 and chars[-1] != ' ' and code == '': chars.append(' ')
+    elif code != '': chars.append(MORSE_CODE[code])
+  
+  if chars[-1] == ' ': chars = chars[:-1]
+  for char in chars: message += char
+  return message
